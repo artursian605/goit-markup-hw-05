@@ -63,8 +63,19 @@
 }
 .nav-had {
   display: flex;
+  position: relative;
   list-style: none;
   margin-right: 331px;
+}
+.nav-had-item:hover::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 4px;
+  padding-top: 4px;
+  transition: 250ms transform cubic-bezier(0.4, 0, 0.2, 1);
+  background: #2196f3;
+  border-radius: 2px;
 }
 .nav-had-item a {
   text-decoration: none;
@@ -130,24 +141,27 @@
   letter-spacing: 0.02em;
   color: #757575;
 }
-.contact-item:hover,
-.contact-item:focus {
+.contact li a:hover,
+.contact li a:focus {
   --color5: var(--hover-color);
+  transition: 250ms transform cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contact-item-phone:hover,
-.contact-item-phone:focus,
-.contact-item-mail:hover,
-.contact-item-mail:focus,
+.contact-item:hover .contact-item-phone,
+.contact-item:focus .contact-item-phone,
+.contact-item:hover .contact-item-mail,
+.contact-item:focus .contact-item-mail,
 .email:hover,
 .email:focus,
 .smartphone:hover,
 .smartphone:focus {
   --color5: var(--hover-color);
   color: var(--hover-color);
+  transition: 250ms transform cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-had a:hover,
 .nav-had a:focus {
+  transition: 250ms transform cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--hover-color);
 }
 
@@ -381,6 +395,7 @@
 }
 .social-icon-item-sprite:hover,
 .social-icon-item-sprite:focus {
+  transition: 250ms transform cubic-bezier(0.4, 0, 0.2, 1);
   --color3: var(--hover-color);
   --color4: var(--main-white-color);
 }
@@ -388,6 +403,126 @@
 /*портфолио*/
 .had-nav-logo {
   margin-bottom: 100px;
+}
+.pf-box-1 {
+  position: relative;
+  background-image: url(../img/photoportfolio/img-10.jpg);
+  width: 370px;
+  height: 294px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+.pf-box-2 {
+  position: relative;
+  background-image: url(../img/photoportfolio/img-2-2.jpg);
+  width: 370px;
+  height: 294px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+.pf-box-3 {
+  position: relative;
+  background-image: url(../img/photoportfolio/img-3-2.jpg);
+  width: 370px;
+  height: 294px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+.pf-box-4 {
+  position: relative;
+  background-image: url(../img/photoportfolio/img-4-2.jpg);
+  width: 370px;
+  height: 294px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+.pf-box-5 {
+  position: relative;
+  background-image: url(../img/photoportfolio/img-5-2.jpg);
+  width: 370px;
+  height: 294px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+.pf-box-6 {
+  position: relative;
+  background-image: url(../img/photoportfolio/img-6.jpg);
+  width: 370px;
+  height: 294px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+.pf-box-7 {
+  position: relative;
+  background-image: url(../img/photoportfolio/img-7-2.jpg);
+  width: 370px;
+  height: 294px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+.pf-box-8 {
+  position: relative;
+  background-image: url(../img/photoportfolio/img-8.jpg);
+  width: 370px;
+  height: 294px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+.pf-box-9 {
+  position: relative;
+  background-image: url(../img/photoportfolio/img-9.jpg);
+  width: 370px;
+  height: 294px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+.pf-box-1:hover .over,
+.pf-box-2:hover .over,
+.pf-box-3:hover .over,
+.pf-box-4:hover .over,
+.pf-box-5:hover .over,
+.pf-box-6:hover .over,
+.pf-box-7:hover .over,
+.pf-box-8:hover .over,
+.pf-box-9:hover .over {
+  transform: translatey(0);
+}
+
+.over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 150, 243, 0.9);
+  transform: translatey(+100%);
+  transition: 250ms transform cubic-bezier(0.4, 0, 0.2, 1);
+}
+.over p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+
+.pf-main-item-down {
+  color: #fff;
+  padding: 10px;
+  margin: 0;
+  font-size: 18px;
 }
 
 .pfnav button {
@@ -418,6 +553,7 @@
 .pfnav li button:focus {
   color: var(--main-white-color);
   background-color: var(--hover-color);
+  transition: 250ms transform cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 3px 1px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
@@ -431,7 +567,7 @@
 .pf-main li:nth-child(3n) {
   margin-right: 0px;
 }
-.pf-main h3 {
+.pf-main-item-down h3 {
   font-family: var(--font-family-nav);
   font-style: normal;
   font-weight: bold;
@@ -441,7 +577,7 @@
   color: var(--nav-color);
   margin-left: 24px;
 }
-.pf-main p {
+.pf-main-item-down p {
   font-family: var(--font-family-nav);
   font-style: normal;
   font-weight: normal;
@@ -456,10 +592,14 @@
   height: 404px;
   background: #ffffff;
   border: 1px solid #eeeeee;
-  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    0px 1px 1px rgba(0, 0, 0, 0.12);
+
   margin-right: 25px;
   margin-bottom: 25px;
+}
+.pf-main li:hover {
+  transition: 250ms transform cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 .pf-main li:nth-last-child(-n + 3) {
   margin-bottom: 0px;
