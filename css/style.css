@@ -63,19 +63,24 @@
 }
 .nav-had {
   display: flex;
-  position: relative;
   list-style: none;
   margin-right: 331px;
 }
+.nav-had-item {
+  position: relative;
+}
+
 .nav-had-item:hover::after {
   display: block;
+  position: absolute;
+  bottom: 0;
   content: "";
   width: 100%;
   height: 4px;
-  padding-top: 4px;
   transition: 250ms transform cubic-bezier(0.4, 0, 0.2, 1);
   background: #2196f3;
   border-radius: 2px;
+  margin-bottom: 0px;
 }
 .nav-had-item a {
   text-decoration: none;
